@@ -16,7 +16,8 @@ class GroupsController < ApplicationController
   # redirect_to group_show
   end
 
-  def edit(group)
+  def edit
+# def edit(group)
     @group = Group.find(params[:id])
   # @group = Group.find[:id]
   # redirect_to group_edit
