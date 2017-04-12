@@ -5,7 +5,8 @@ class GroupsController < ApplicationController
   end
 
   def new
-    @groups = Group.new
+    @group = Group.new
+  # @groups = Group.new
   # redirect_to groups_new
   end
 
