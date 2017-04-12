@@ -22,7 +22,7 @@ class GroupsController < ApplicationController
   # @group = Group.find[:id]
   # redirect_to group_edit
   end
-
+  
   def create
 # def create(group)
     @group = Group.new(group_params)
@@ -38,19 +38,27 @@ class GroupsController < ApplicationController
   end
 
 
+#   def update
+# # def update(group)
+#     @group = Group.find(params[:id])
+#   # @group = Group.find[params]
+#     @group.update(group_params)
+#   # if group.save
+#     redirect_to groups_path, notice: 'Update Success'
+#     # redirect_to groups_index
+#     # render edit
+#   end
+
   def update
-# def update(group)
     @group = Group.find(params[:id])
-  # @group = Group.find[params]
     if @group.update(group_params)
-  # if group.save
       redirect_to groups_path, notice: 'Update Success'
-    # redirect_to groups_index
     else
+      # render edit
       render :edit
-    # render edit
     end
   end
+
 
   def destroy
 # def delete(group)
