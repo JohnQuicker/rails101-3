@@ -24,7 +24,7 @@ class GroupsController < ApplicationController
 
   def create
 # def create(group)
-    @group = Group.new[group_params]
+    @group = Group.new(group_params)
   # @group = Group.[params]
     if @group.save
   # if group.save
