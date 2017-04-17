@@ -1,0 +1,7 @@
+<%= simple_form_for @group do |f| %>
+  <div class="form_group">
+    <%= f.input :title, input_html: { class: "form_control" } %>
+    <%= f.input :description, input_html: { class: "form_control" } %>
+  </div>
+    <%= f.submit "开工", class: "btn btn-primary", data: { :disable_with => '施工中……' } %>
+<% end %>
