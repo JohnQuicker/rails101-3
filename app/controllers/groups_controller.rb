@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @posts = @group.posts.order("created_at DESC")
+    @posts = @group.posts.recent
   # @group = Group.find[:id]
   # redirect_to group_show
   end
