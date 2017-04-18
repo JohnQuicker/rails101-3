@@ -8,6 +8,7 @@
         <td>#</td>
         <td>河名</td>
         <td>流域</td>
+        <td>开凿者</td>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
         <td> # </td>
         <td> <%= link_to(group.title, group_path(group)) %> </td>
         <td> <%= group.description %> </td>
+        <td> <%= group.user.email %> </td>
         <td>
           <%= link_to("治河", edit_group_path(group), class: "btn btn-sm btn-default") %>
           <%= link_to("填平", group_path(group), class: "btn btn-sm btn-default",
