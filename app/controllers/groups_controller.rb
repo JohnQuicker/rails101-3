@@ -17,6 +17,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @posts = @group.posts
   # @group = Group.find[:id]
   # redirect_to group_show
   end
