@@ -36,6 +36,7 @@ class GroupsController < ApplicationController
     @group.user = current_user
     if @group.save
   # if group.save
+      current_user.join!(@group)
       redirect_to groups_path
     # redirect_to groups_index
     else
