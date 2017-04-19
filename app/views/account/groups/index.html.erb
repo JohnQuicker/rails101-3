@@ -1,0 +1,28 @@
+<div class="col-md-12">
+
+  <h2 class = "text-center"> 我关心的流域 </h2>
+
+  <table class = "table">
+    <thead>
+      <tr>
+        <th> # </th>
+        <th> 流域名 </th>
+        <th> 文化特色 </th>
+        <th> 鱼量 </th>
+        <th> 最新动向 </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @groups.each do |group| %>
+        <tr>
+          <td> # </td>
+          <td> <%= link_to(group.title, group_path(group)) %> </td>
+          <td> <%= group.description %> </td>
+          <td> <%= group.posts.count %> </td>
+          <td> <%= group.updated_at %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
