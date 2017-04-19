@@ -19,6 +19,28 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @group = Group.find(params[:group_id])
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @group = Group.find(params[:group_id])
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to group_path(@group), notice: "重放成功"
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.delete
+    redirect_to account_posts_path, alert: "捞出来了"
+  end
+
+
   private
 
   def post_params
