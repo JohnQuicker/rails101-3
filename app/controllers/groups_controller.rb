@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
   def index
     @groups = Group.all
-  # @group = Group.all
+  # @group = Group.all 
   end
 
   def new
